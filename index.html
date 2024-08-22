@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic JSON Table with Filters</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>JSON Table Generator</h1>
+    <div class="input-section">
+        <label for="jsonFile">Upload JSON File:</label>
+        <input type="file" id="jsonFile" accept=".json">
+        <br><br>
+        <label for="jsonInput">Or Paste JSON Code:</label>
+        <textarea id="jsonInput" rows="10" placeholder="Paste JSON code here..."></textarea>
+        <br><br>
+        <button id="generateTable">Generate Table</button>
+    </div>
+
+    <table id="gamesTable" style="display: none;">
+        <thead>
+            <tr>
+                <th><input type="text" id="filterName" placeholder="Filter Name"></th>
+                <th><input type="text" id="filterProduct" placeholder="Filter Product"></th>
+                <th><input type="text" id="filterPlatforms" placeholder="Filter Platforms"></th>
+                <th><input type="text" id="filterFreebet" placeholder="Filter Freebet"></th>
+                <th><input type="text" id="filterCategory" placeholder="Filter Category"></th>
+                <th><input type="text" id="filterBlockedCountries" placeholder="Filter Blocked Countries"></th>
+            </tr>
+            <tr>
+                <th>Name</th>
+                <th>Product</th>
+                <th>Platforms</th>
+                <th>Freebet Support</th>
+                <th>Category</th>
+                <th>Blocked Countries</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Table rows will be added here dynamically -->
+        </tbody>
+    </table>
+
+    <script src="script.js"></script>
+</body>
+</html>
